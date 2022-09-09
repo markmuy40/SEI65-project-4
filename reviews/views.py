@@ -5,6 +5,7 @@ from rest_framework.exceptions import NotFound
 
 from .models import Review
 from .serializers.common import ReviewSerializer
+from .serializers.populated import PopulatedReviewSerializer
 
 # Create your views here.
 class ReviewListView(APIView):
@@ -43,7 +44,7 @@ class ReviewDetailView(APIView):
     def get(self, _request, pk):
         review = self.get_review(pk=pk)
         print("single review return endpoint")
-        serialized_review = ReviewSerializer(review)
+        serialized_review = PopulatedReviewSerializer(review)
         return Response(serialized_review.data)
 
     # function to delete a review
