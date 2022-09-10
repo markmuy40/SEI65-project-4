@@ -1,0 +1,18 @@
+[
+{
+  "model": "favourites.favourite",
+  "pk": 13,
+  "fields": {
+    "review": 1,
+    "myfavourite": true
+  }
+},
+{
+  "model": "favourites.favourite",
+  "pk": 14,
+  "fields": {
+    "review": 3,
+    "myfavourite": true
+  }
+}
+]

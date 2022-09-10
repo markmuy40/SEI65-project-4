@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'jwt_auth',
     'reviews',
     'comments',
     'favourites',
@@ -85,7 +86,7 @@ DATABASES = {
     }
 }
 
-# AUTH_USER_MODEL = 'jwt_auth.User'
+AUTH_USER_MODEL = 'jwt_auth.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

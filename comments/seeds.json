@@ -1,0 +1,11 @@
+[
+{
+  "model": "comments.comment",
+  "pk": 1,
+  "fields": {
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, ante ac maximus volutpat, leo ipsum porta risus, a egestas odio sapien nec nulla. Aenean enim massa, dignissim a sapien vel, fermentum pulvinar lectus. Proin id lorem nisl. Proin porttitor sit amet sapien sed vestibulum. Duis ac nunc diam. Nunc aliquet, purus nec tempus pretium, lectus felis malesuada justo, a consequat diam sem",
+    "created_at": "2022-09-09T12:37:20.145Z",
+    "review": 4
+  }
+}
+]

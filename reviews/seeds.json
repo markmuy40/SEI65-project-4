@@ -1,0 +1,46 @@
+[
+{
+  "model": "reviews.review",
+  "pk": 1,
+  "fields": {
+    "Title": "Alpkit Koala Bikepacking Seat Bag",
+    "Price": "£60",
+    "Description": "Bag build and packing\\r\\nThe bag is made from VX21, a four-layer, 210 denier fabric with a durable water repellent (DWR) finish; it's a popular choice, widely used on similar styles of bags. Given the bag's position, it's highly likely to get wet from the rear wheel so weatherproofing is vital, and throughout use the contents stayed completely dry. It's not claimed to be fully waterproof, so I'd still suggest you pack anything electronic, or anything that could be damaged by water, within a dry-bag.\\r\\n\\r\\nThe Koala uses a roll-top closure with two buckles, one for holding it closed and the other to tension the contents. This is very useful when packing items such as a light sleeping bag or down jacket – items that can be compressed to reduce overall space. While it may not be a design intention, the compression strap is also a possible location for a rear light, depending on the light's fitting.",
+    "ImageUrl": "https://cdn.road.cc/sites/default/files/styles/main_width/public/2020-alpkit-enduro-seat-pack.jpg",
+    "created_at": "2022-09-09T12:01:03.988Z"
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 2,
+  "fields": {
+    "Title": "Restrap Bar Bag Small review – versatile bag and holster bikepacking combo",
+    "Price": "£100",
+    "Description": "The big advantage of the holster and dry bag design system is that once the holster is strapped securely onto the bars you can remove and refit the dry bag really easily. That’s a major plus compared to trying to pull things out of the ends with the bars in the way, or having to unmount the entire bag. The holster also does a decent job of protecting the lightweight dry bag too - from above and behind at least. It also keeps the whole set up stable and gives you a firm base for the bungee (and the Food Pouch if you go ‘Large’). \\r\\n\\r\\nThe downside is that the chunky ‘holster’ with its heavyweight straps weighs more than some complete lightweight bag bag set ups. You also need to line up the slightly saggy dry bag carefully to stop it getting lopsided and getting too close to the bars even on a relatively broad, flared bar.\\r\\n\\r\\nWhile the spaced, below the bars set up means you still get a full set of hand positions it also adds depth to the whole set up. Restrap themselves recommend at least 230mm of clearance between bar and tire and that’s not going to be possible with some smaller bikes. Obviously you could remove the spacers and cinch it right up to the bars if needs be though. While the holster straps that hold the dry bag have tidy tabs, there aren’t any on the fork crown straps. That means you’ll need to be careful to tuck loose ends out of the way of the wheels. They also add another area where the paint will need protecting from wear. Alternatively you can use the cunning new Restrap Bumper Bar that slides under the stem as a more solid secondary mount/paint protector.",
+    "ImageUrl": "https://cdn.mos.cms.futurecdn.net/NchPtRGeaeswZeVbsATik8-970-80.jpeg.webp",
+    "created_at": "2022-09-09T12:34:56.130Z"
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 3,
+  "fields": {
+    "Title": "Revelate Designs Tangle Bikepacking Frame Bag Review",
+    "Price": "£96",
+    "Description": "I’ve been using the Revelate Designs Tangle Frame Bag for over a year on all of my bikes and consider it essential for bikepacking trips and everyday training rides. The Tangle uses space on my frame that would otherwise go to waste and provides super handy access to items, like food and gels, while I’m riding. For bikepacking, the Tangle also provides a convenient place to store tent poles or tent stakes where they won’t get in the way. I also use panniers on my gravel and fat tire bike to hold the bulk of my camping gear. If you’re trying to decide between bikepacking bags or panniers, I’d encourage you to consider a mixed approach. See Bikepacking Bags vs Panniers: How to Choose.",
+    "ImageUrl": "https://sectionhiker.com/wp-content/uploads/thumbskeep/2018/07/The-Tangle-is-great-for-storing-tent-poles-mini-pumps-tools-and-tubes.jpg.webp",
+    "created_at": "2022-09-09T12:36:10.556Z"
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 4,
+  "fields": {
+    "Title": "Lorem Ipsum",
+    "Price": "75p",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, ante ac maximus volutpat, leo ipsum porta risus, a egestas odio sapien nec nulla. Aenean enim massa, dignissim a sapien vel, fermentum pulvinar lectus. Proin id lorem nisl. Proin porttitor sit amet sapien sed vestibulum. Duis ac nunc diam. Nunc aliquet, purus nec tempus pretium, lectus felis malesuada justo, a consequat diam sem et neque. Ut quis iaculis est. Proin congue ut elit eu auctor. Quisque feugiat ac leo sit amet interdum. Nullam sem est, rutrum et dui at, bibendum porttitor risus.\\r\\n\\r\\nFusce congue tellus sem, in fermentum leo interdum sed. Duis in justo condimentum, vehicula dolor eu, facilisis ante. Mauris consequat metus eget leo molestie malesuada. Phasellus tempus, odio sit amet porta convallis, tellus justo lobortis enim, volutpat suscipit urna urna sit amet lorem. Nulla id consectetur dolor. Mauris scelerisque eros urna, sit amet placerat ligula volutpat et. Sed non erat at lectus consectetur posuere gravida eu nisi. Nulla consectetur orci eu dolor tincidunt eleifend. Nulla feugiat nulla elit, vel ornare orci suscipit in.\\r\\n\\r\\nDonec finibus condimentum dolor faucibus gravida. Sed a orci vitae tortor mollis lacinia vitae sit amet dolor. Morbi justo dolor, maximus vitae lacus bibendum, consectetur imperdiet velit. In eu lorem consectetur, mattis leo et, pretium ligula. Aliquam ac arcu iaculis, sagittis ipsum et, dignissim enim. Donec ultricies pretium sem quis laoreet. Vestibulum tincidunt eros elementum pharetra mollis. Fusce ac mattis nibh. Praesent ullamcorper scelerisque arcu eget mollis. Praesent in rutrum lorem. Curabitur porta consequat volutpat.\\r\\n\\r\\nMaecenas tempor nec lacus molestie congue. In molestie, magna in ultricies lobortis, magna orci fermentum arcu, non gravida enim ipsum et ligula. Fusce vulputate, magna a aliquam volutpat, erat tortor efficitur nibh, ut scelerisque magna magna ut tellus. Maecenas in sem vitae purus pharetra ultricies. Duis pulvinar semper felis. Nam interdum ipsum a scelerisque pharetra. Donec eget tempus mauris.\\r\\n\\r\\nSuspendisse potenti. Curabitur sit amet scelerisque velit, a ultrices elit. Quisque nec aliquam risus. In hac habitasse platea dictumst. Fusce vel vulputate leo. Nulla eget hendrerit neque. Nulla aliquet luctus ex dapibus tempus. Curabitur blandit tristique venenatis.",
+    "ImageUrl": "https://m.media-amazon.com/images/I/61AQ1juhBAL._AC_SX679_.jpg",
+    "created_at": "2022-09-09T12:36:50.673Z"
+  }
+}
+]

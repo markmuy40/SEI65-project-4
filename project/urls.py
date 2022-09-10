@@ -20,5 +20,6 @@ urlpatterns = [
     path('api/admin/', admin.site.urls),
     path('api/reviews/', include('reviews.urls')),
     path('api/comments/', include('comments.urls')),
-    path('api/favourites/', include('favourites.urls'))
+    path('api/favourites/', include('favourites.urls')),
+    path('api/auth/', include('jwt_auth.urls')),
 ]
