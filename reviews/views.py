@@ -7,9 +7,11 @@ from .models import Review
 from .serializers.common import ReviewSerializer
 from .serializers.populated import PopulatedReviewSerializer
 
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 # Create your views here.
 class ReviewListView(APIView):
-
+    permission_classes = (IsAuthenticatedOrReadOnly, )
     # get all reviews
     def get(self, _request):
         reviews = Review.objects.all()
