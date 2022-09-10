@@ -35,6 +35,8 @@ class ReviewListView(APIView):
 
 class ReviewDetailView(APIView):
 
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+
     # function to fetch data
     def get_review(self, pk):
         try:
