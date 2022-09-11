@@ -1,0 +1,40 @@
+.footer-main {
+  min-width: 100vw;
+  background-color: grey;
+  position: absolute;
+  height: 125px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  height:13vh;
+  text-align: center;
+  padding-top: 5px;
+  p {
+    text-align: center;
+  }
+  
+}
+.footer-header {
+  text-align: center;
+  min-width: 100vw;
+}
+
+.Mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px; 
+  padding: 5px 20px 20px 20px;
+  
+}
+
+.Logo {
+  display: flex;
+  justify-content: center;
+  height:50px;
+  width:50px;
+  margin-top: 10px;
+}

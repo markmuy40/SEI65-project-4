@@ -1,0 +1,23 @@
+.home {
+  background: url('./images/bikepacked.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card {
+  background: grey;
+
+
+}
+
+.CardImg {
+  position: cover;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.CardImg:hover {
+  opacity: 1.0;
+}

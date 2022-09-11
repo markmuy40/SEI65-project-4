@@ -31,7 +31,7 @@ const App = () => {
         <PageNavbar />
         <Routes>
           <Route path = '/' element = {<Home/>} />
-          <Route path = '/reviewdetail' element = {<ReviewDetail/>} />
+          <Route path = '/reviewdetail/:id/' element = {<ReviewDetail/>} />
           <Route path = '/register' element = {<Register/>} />
           <Route path = '/login' element = {<Login/>} />
           <Route path = '*' element = {<NotFound/>} />

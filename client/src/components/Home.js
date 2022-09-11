@@ -30,27 +30,31 @@ const Home = () => {
   }, [])
   
   return (
-    <Container as="main">
-      <h1 className='text-center mb-4'>Reviews</h1>
-      <Row>
-        { reviews.map(review => {
-          const { id, Title, Description, ImageUrl } = review
-          console.log(review)
-          return (
-            <Col key={id} md="6" lg="4" className='mb-4'>
-              <Link to={`/reviews/${id}/`}>
-                <Card>
-                  <Card.Title className='text-center mb-0'>{Title}</Card.Title>
-                  <Card.Body className='bg-light'>
-                    <Card.Img variant='top' src={ImageUrl}></Card.Img>
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
-          )
-        }) }
-      </Row>
-    </Container>
+    <div className="home">
+      <Container as="main">
+        <h1 className='text-center mb-4'>Reviews</h1>
+        <Row>
+          { reviews.map(review => {
+            const { id, Title, Price, ImageUrl } = review
+            console.log(review)
+            return (
+              <Col key={id} md="6" lg="4" className='mb-4'>
+                <Link to={`/reviewdetail/${id}/`}>
+                  <Card>
+                    <Card.Body className='bg-light'>
+                      <Card.Title className='text-center mb-0'>{Title}</Card.Title>
+                      <Card.Subtitle className="mb-2 text-muted">{Price}</Card.Subtitle>
+                      <Card.Img className="CardImg" md="6" lg="4" variant='top' src={ImageUrl}></Card.Img>
+                    </Card.Body>
+                  </Card>
+                </Link>
+              </Col>
+            )
+          }) }
+        </Row>
+      </Container>
+    </div>
+
   )
 
 

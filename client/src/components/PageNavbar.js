@@ -14,7 +14,7 @@ const PageNavbar = () => {
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
-    window.localStorage.removeItem('userName')
+    window.localStorage.removeItem('username')
     window.location.reload(navigate('/login'))
 
   }

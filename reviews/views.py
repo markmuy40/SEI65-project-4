@@ -49,7 +49,7 @@ class ReviewDetailView(APIView):
         review = self.get_review(pk=pk)
         print("single review return endpoint")
         serialized_review = PopulatedReviewSerializer(review)
-        return Response(serialized_review.data)
+        return Response(serialized_review.data, status=status.HTTP_200_OK)
 
     # function to delete a review
     def delete(self, _request, pk):
