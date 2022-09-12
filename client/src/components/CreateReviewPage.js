@@ -5,9 +5,10 @@ import axios from 'axios'
 
 import { getToken } from './auth'
 
+
 const CreateReviewPage = () => {
-  const [resStatus, setResStatus] = useState('')
-  const [loginError, setLoginError] = useState('')
+  const [ resStatus, setResStatus ] = useState('')
+  const [ loginError, setLoginError ] = useState('')
   const [ errors, setErrors ] = useState('')
   const [ reviewData, setReviewData ] = useState({
     Title: '',
@@ -27,7 +28,7 @@ const CreateReviewPage = () => {
   const createReview = async (e) => {
     e.preventDefault()
 
-    // //the code below is to check if the url is the right format to be printed
+    // the code below is to check if the url is the right format to be printed
     const body = { ...reviewData, createdAt: Date.now() }
     if (body.ImageUrl.match(/\.(jpeg|jpg|gif|png)$/) === null && body.imageUrl !== '')  { 
       setResStatus('wrong-url')
@@ -36,13 +37,13 @@ const CreateReviewPage = () => {
 
     try {
       await axios.post('/api/reviews/', body, {
+        
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
       })
-
-      // setResStatus(res)
-      navigate.push('/')
+      // setResStatus(res)§
+      navigate('/')
     } catch (error){
       console.log(error)
       setErrors(error.response.data.detail)
@@ -51,7 +52,7 @@ const CreateReviewPage = () => {
   return (
     <div className='create-container'>
       <h1 className='create-title'>Create Review</h1>
-      <form onSubmit={createReview} className='create-form'>
+      <form onSubmit={(e)=>createReview(e)} className='create-form'>
         <input className="review-price" type='text' name='Price' placeholder='Price' value={reviewData.Price} onChange={handleChange}/>
         <input className="review-title" type='text' name='Title' placeholder='Title' value={reviewData.Title} onChange={handleChange}/>
         <input className="review-url" type='text' name='ImageUrl' placeholder='Image URL' value={reviewData.ImageUrl} onChange={handleChange}/>

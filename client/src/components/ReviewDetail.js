@@ -10,7 +10,6 @@ const ReviewDetail = () => {
   // Set of states
   const { id } = useParams()
   const [ errors, setErrors ] = useState(false)
-  const navigate = useNavigate()
   const [ singleReview, setSingleReview ] = useState([])
 
   useEffect(() => {
@@ -33,18 +32,20 @@ const ReviewDetail = () => {
       
       
       <div key={singleReview.id} className="review-detail">
-        <div>
-          <h3 className="review-title">{singleReview.Title}</h3>
+        <div className="review-title">
+          <h3>{singleReview.Title}</h3>
         </div>
-        <div>
-          <h4 className="review-price">{singleReview.Price}</h4>
+        <div className="review-price">
+          <h4>{singleReview.Price}</h4>
         </div>
-        <div>
+        <div className="review-description">
           {/* <h4 className="review-owner">by: {singleReview.owner.username}</h4> */}
-          <p className="review-description">{singleReview.Description}</p>
+          <p>{singleReview.Description}</p>
         </div>
-        <div>
-          <img className="review-image" src={singleReview.ImageUrl}></img>
+        <div className="review-image">
+          
+          <img src={singleReview.ImageUrl}></img>
+          
         </div>    
       </div>
       

@@ -3,6 +3,20 @@
   justify-content: center;
 }
 
+.review-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.review-title {
+  padding: 20px;
+}
+
 .review-description {
   white-space: pre-wrap;
   white-space: pre-line;
@@ -12,9 +26,15 @@
   -webkit-box-orient: vertical;
   overflow-wrap: break-word;
   max-width: 80vw;
+  padding-left: 10px;
+  padding-right: 10px;
 
 }
 
 .review-image {
-  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  padding: 20px;
+
 }

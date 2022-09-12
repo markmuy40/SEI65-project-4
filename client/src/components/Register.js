@@ -22,12 +22,16 @@ const Register = () => {
     setError(false)
   }
 
+  // const setTokenToLocalStorage = (token) => {
+  //   window.localStorage.setItem('token, token')
+  // }
   
   const onSubmit = async (e) => {
     e.preventDefault()
   
     try {
-      const res = await axios.post('/api/auth/register/', formData)
+      const { data } = await axios.post('/api/auth/register/', formData)
+      // setTokenToLocalStorage(data.token)
       navigate('/login')
     } catch (error) {
       console.log('error->', error)

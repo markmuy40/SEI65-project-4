@@ -11,8 +11,8 @@ class JWTAuthentication(BasicAuthentication):
     def authenticate(self, request):
         # check authorization header exists
         print("authentication middleware")
-        print("request.data", request.data)
-        header = request.data.get('Authorization')
+        print("request.headers", request.headers)
+        header = request.headers.get('Authorization')
         print("header->", header)
         if not header:
             return None
@@ -21,6 +21,7 @@ class JWTAuthentication(BasicAuthentication):
         if not header.startswith('Bearer'):
             print("failed at token validity")
             raise PermissionDenied("invalid token")
+
 
         # remove bearer from beginning and save token to a variable
         token = header.replace('Bearer ', '')

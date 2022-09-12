@@ -23,8 +23,8 @@ const Login = () => {
     e.preventDefault()
   
     try {
-      const res = await axios.post('/api/auth/login/', loginData)
-      const { token } = res.data
+      const { data } = await axios.post('/api/auth/login/', loginData)
+      const { token } = data
       console.log('token', token)
       window.localStorage.setItem('token', token)
       window.localStorage.setItem('username', loginData.username)
