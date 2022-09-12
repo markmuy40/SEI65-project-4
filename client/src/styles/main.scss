@@ -5,8 +5,21 @@
 @import './pagenavbar.scss';
 @import './pagefooter.scss';
 @import './reviewdetail.scss';
+@import './createreview.scss';
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: red;
+  width: 100vw;
+  background: url('./images/bikepacked.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

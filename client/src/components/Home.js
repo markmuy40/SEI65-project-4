@@ -31,20 +31,20 @@ const Home = () => {
   
   return (
     <div className="home">
+      <h1 className='text-center mb-4'>Reviews</h1>
       <Container as="main">
-        <h1 className='text-center mb-4'>Reviews</h1>
         <Row>
           { reviews.map(review => {
             const { id, Title, Price, ImageUrl } = review
             console.log(review)
             return (
-              <Col key={id} md="6" lg="4" className='mb-4'>
+              <Col key={id} lg="col-3" className='size'>
                 <Link to={`/reviewdetail/${id}/`}>
                   <Card>
                     <Card.Body className='bg-light'>
                       <Card.Title className='text-center mb-0'>{Title}</Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">{Price}</Card.Subtitle>
-                      <Card.Img className="CardImg" md="6" lg="4" variant='top' src={ImageUrl}></Card.Img>
+                      <Card.Img className="CardImg" variant='top' src={ImageUrl}></Card.Img>
                     </Card.Body>
                   </Card>
                 </Link>

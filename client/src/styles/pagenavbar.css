@@ -7,17 +7,16 @@
 
 .navbar {
   min-width: 350px;
-
-  .navbar-brand {
-    margin-right: 0px;
-    margin-left: 50px;
-  }
-  .nav-link {
-    margin-inline: 10px;
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-  }
+}
+.navbar .navbar-brand {
+  margin-right: 0px;
+  margin-left: 50px;
+}
+.navbar .nav-link {
+  margin-inline: 10px;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
 }
 
 .banner {
@@ -25,4 +24,4 @@
   font-weight: bolder;
   font-size: 100px;
   text-align: center;
-}
+}/*# sourceMappingURL=pagenavbar.css.map */

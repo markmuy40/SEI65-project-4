@@ -1,8 +1,18 @@
-.login-form {
+input {
+  margin: 10px;
+  width: 250px;
+  height: 30px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.register-form {
+  color: white;
   display: flex;
   flex-direction: column;
   background-color: black;
-  color: white;
   opacity: 0.8;
   min-width: 320px;
   max-width: 320px;
@@ -10,7 +20,7 @@
   align-items: center;
 }
 
-.login-container{
+.register-container {
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -27,26 +37,41 @@
   max-width: 350px;
 }
 
-.login-button-container {
+.register-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  background-color: grey;
 }
 
-.login-button {
+.register-button {
   width: 150px;
   height: 45px;
   border-radius: 3px;
   font-size: 16px;
-  background-color: grey;
-  border: 1px solid grey;
-  &:hover {
-    background-color: greenyellow;
-  }
+  border: 1px solid;
+}
+.register-button:hover {
+  background-color: blue;
 }
 
-.login-title {
+.register-title {
   margin-top: 0;
-
 }
+
+.error {
+  margin-block: 20px;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 300px;
+}
+
+.input {
+  background-color: white;
+}/*# sourceMappingURL=register.css.map */

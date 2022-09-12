@@ -1,0 +1,365 @@
+.home {
+  background: url("./images/bikepacked.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background: grey;
+}
+
+.CardImg {
+  position: cover;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+}
+
+.CardImg:hover {
+  opacity: 1;
+}
+
+input {
+  margin: 10px;
+  width: 250px;
+  height: 30px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.register-form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  opacity: 0.8;
+  min-width: 320px;
+  max-width: 320px;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-block: 30px;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5px;
+  min-width: 350px;
+  max-width: 350px;
+}
+
+.register-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: grey;
+}
+
+.register-button {
+  width: 150px;
+  height: 45px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 1px solid;
+}
+.register-button:hover {
+  background-color: blue;
+}
+
+.register-title {
+  margin-top: 0;
+}
+
+.error {
+  margin-block: 20px;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 300px;
+}
+
+.input {
+  background-color: white;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  min-width: 320px;
+  max-width: 320px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-block: 30px;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5px;
+  min-width: 350px;
+  max-width: 350px;
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.login-button {
+  width: 150px;
+  height: 45px;
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: grey;
+  border: 1px solid grey;
+}
+.login-button:hover {
+  background-color: greenyellow;
+}
+
+.login-title {
+  margin-top: 0;
+}
+
+.footer-main {
+  min-width: 100vw;
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  height: 125px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  height: 13vh;
+  text-align: center;
+  padding-top: 5px;
+}
+.footer-container p {
+  text-align: center;
+}
+
+.footer-header {
+  text-align: center;
+  min-width: 100vw;
+}
+
+.Mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 5px 20px 20px 20px;
+}
+
+.Logo {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+.navbar-main {
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  min-width: 100vw;
+}
+
+.navbar {
+  min-width: 350px;
+}
+.navbar .navbar-brand {
+  margin-right: 0px;
+  margin-left: 50px;
+}
+.navbar .nav-link {
+  margin-inline: 10px;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+
+.banner {
+  max-width: 600px;
+  font-weight: bolder;
+  font-size: 100px;
+  text-align: center;
+}
+
+.footer-main {
+  min-width: 100vw;
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  height: 125px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  height: 13vh;
+  text-align: center;
+  padding-top: 5px;
+}
+.footer-container p {
+  text-align: center;
+}
+
+.footer-header {
+  text-align: center;
+  min-width: 100vw;
+}
+
+.Mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 5px 20px 20px 20px;
+}
+
+.Logo {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+}
+
+.review-description {
+  white-space: pre-wrap;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-wrap: break-word;
+  max-width: 80vw;
+}
+
+.review-image {
+  max-width: 600px;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  min-width: 295px;
+  max-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-container {
+  height: 70vh;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-block: 30px;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.create-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: grey;
+}
+
+.create-title {
+  margin-top: 0;
+  background-color: grey;
+}
+
+.review-title {
+  width: 500px;
+}
+
+.review-url {
+  width: 500px;
+}
+
+#message-box {
+  height: 160px;
+  width: 500px;
+  resize: none;
+  border-radius: 5px;
+}
+
+.create-button {
+  width: 150px;
+  height: 45px;
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: green;
+  border: 1px solid;
+}
+.create-button:hover {
+  background-color: greenyellow;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: red;
+  width: 100vw;
+  background: url("./images/bikepacked.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=main.css.map */

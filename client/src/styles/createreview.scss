@@ -1,0 +1,65 @@
+.create-form {
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  min-width: 295px;
+  max-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-container {
+  height: 70vh;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-block: 30px;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.create-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: grey;
+}
+
+.create-title {
+  margin-top: 0;
+  background-color: grey;
+}
+
+.review-title {
+  width:500px;
+}
+
+.review-url {
+  width: 500px;
+}
+
+#message-box {
+  height: 160px;
+  width: 500px;
+  resize:none;
+  border-radius: 5px;
+  }
+
+  .create-button {
+    width: 150px;
+    height: 45px;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: green;
+    border: 1px solid;
+    &:hover {
+      background-color: greenyellow;
+    }
+  }
+
+

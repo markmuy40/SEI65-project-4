@@ -1,6 +1,5 @@
 .home {
-
-  background: url('./images/bikepacked.jpeg');
+  background: url("./images/bikepacked.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,14 +7,6 @@
 
 .card {
   background: grey;
-  max-width: 200px;
-}
-
-
-.size {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: blue;
 }
 
 .CardImg {
@@ -23,9 +14,11 @@
   border-radius: 10px;
   height: 200px;
   width: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.8;
 }
+
 .CardImg:hover {
-  opacity: 1.0;
-}
+  opacity: 1;
+}/*# sourceMappingURL=home.css.map */

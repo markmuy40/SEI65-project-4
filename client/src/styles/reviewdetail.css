@@ -1,0 +1,19 @@
+.review-container {
+  display: flex;
+  justify-content: center;
+}
+
+.review-description {
+  white-space: pre-wrap;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-wrap: break-word;
+  max-width: 80vw;
+}
+
+.review-image {
+  max-width: 600px;
+}/*# sourceMappingURL=reviewdetail.css.map */

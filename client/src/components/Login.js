@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-// import { API_URL }  from './config'
+
 
 
 const Login = () => {
@@ -25,12 +25,12 @@ const Login = () => {
     try {
       const res = await axios.post('/api/auth/login/', loginData)
       const { token } = res.data
-      localStorage.setItem('token', token)
-      localStorage.setItem('username', loginData.username)
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+      console.log('token', token)
+      window.localStorage.setItem('token', token)
+      window.localStorage.setItem('username', loginData.username)
       navigate('/')
     } catch (error) {
-      console.log(error)
+      console.log('error', error)
       setErrors(error.response.data.message)
     }
   }
@@ -38,9 +38,10 @@ const Login = () => {
   return (
     <div className='login-body'>
       <div className='login-container'>
-        <h1 className='login-title'>Login Form</h1>
-        {errors && <div className='error'>{errors}</div>}
         <form onSubmit={onSubmit} className='login-form'>
+          <h1 className='login-title'>Login Form</h1>
+          {errors && <div className='error'>{errors}</div>}
+        
           <input 
             type='text' name='username' placeholder='Username' value={loginData.username} onChange={handleChange}
           />

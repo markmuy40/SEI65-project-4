@@ -17,6 +17,7 @@ class CommentListView(APIView):
     def get(self, _request):
         comments = Comment.objects.all()
         print("comments->", comments)
+        print("all comments endpoint")
         serialized_comments = CommentSerializer(comments, many=True)
         print(serialized_comments)
         return Response(serialized_comments.data, status=status.HTTP_200_OK)

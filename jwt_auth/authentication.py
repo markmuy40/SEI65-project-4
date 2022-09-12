@@ -11,7 +11,7 @@ class JWTAuthentication(BasicAuthentication):
     def authenticate(self, request):
         # check authorization header exists
         print("authentication middleware")
-        print("request.headers", request.data)
+        print("request.data", request.data)
         header = request.data.get('Authorization')
         print("header->", header)
         if not header:

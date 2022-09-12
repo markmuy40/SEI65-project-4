@@ -30,8 +30,8 @@ const Register = () => {
       const res = await axios.post('/api/auth/register/', formData)
       navigate('/login')
     } catch (error) {
-      console.log(error)
-      setError(error.response.data.message)
+      console.log('error->', error)
+      setError(error.response.data.code)
     }
   
   }
@@ -39,9 +39,10 @@ const Register = () => {
   
   return (
     <div className='register-container'>
-      <h1 className='register-title'>Registration form</h1>
-      {error && <div className='error'>{error}</div>}
       <form onSubmit={onSubmit} className='register-form'>
+        <h1 className='register-title'>Registration form</h1>
+        {error && <div className='error'>{error}</div>}
+      
         <input 
           type='text' name='username' placeholder='Username' value={formData.username} onChange={handleChange}
         />
