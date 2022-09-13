@@ -11,13 +11,14 @@ input {
   
 }
 
+input {
+  background-color: white;
+}
 
 .register-form {
   color: white;
   display: flex;
   flex-direction: column;
-  background-color: black;
-  opacity: 0.8;
   min-width: 320px;
   max-width: 320px;
   justify-content: center;

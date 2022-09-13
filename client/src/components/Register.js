@@ -26,6 +26,7 @@ const Register = () => {
   //   window.localStorage.setItem('token, token')
   // }
   
+  
   const onSubmit = async (e) => {
     e.preventDefault()
   

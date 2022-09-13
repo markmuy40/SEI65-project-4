@@ -1,7 +1,6 @@
 .create-form {
   display: flex;
   flex-direction: column;
-  background-color: grey;
   min-width: 295px;
   max-width: 300px;
   justify-content: center;
@@ -18,7 +17,7 @@
   margin: 0 auto;
   border: 1px solid black;
   margin-block: 30px;
-  background-color: grey;
+  background-color: rgba(0,0,0,0.8);
   border-radius: 5px;
 }
 
@@ -27,13 +26,13 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  background-color: grey;
+
 }
 
 .create-title {
   margin-top: 0;
-  background-color: grey;
-}
+  color: white;
+}  
 
 .review-title {
   width:500px;

@@ -19,14 +19,14 @@ const PageNavbar = () => {
 
   }
   return (
-    <Navbar className='navbar'expand="lg">
+    <Navbar className='navbar' expand="lg">
       <Container className="navbar-main">
-        {/* <Navbar.Brand className="bender" as={Link} to="/"><img src={image} height="100px"></img></Navbar.Brand> */}
+        <Navbar.Brand className="bender" as={Link} to="/">🚵🏼</Navbar.Brand>
         <div className="banner">Bike Packed?</div>
         <div>
-          <Navbar.Toggle className="justify-content-end" aria-controls='basic-navbar-nav'/>
-          <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
-            <Nav.Link as={Link} to="/">HOME</Nav.Link>
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
             { authUser() 
               ?
               <>

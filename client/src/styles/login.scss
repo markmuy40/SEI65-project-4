@@ -1,7 +1,7 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  background-color: black;
+
   color: white;
   opacity: 0.8;
   min-width: 320px;
@@ -20,8 +20,8 @@
   margin: 0 auto;
   border: 1px solid black;
   margin-block: 30px;
-  background-color: black;
-  opacity: 0.8;
+  background-color: rgba(0,0,0,0.9);
+
   border-radius: 5px;
   min-width: 350px;
   max-width: 350px;
@@ -39,7 +39,7 @@
   height: 45px;
   border-radius: 3px;
   font-size: 16px;
-  background-color: grey;
+  background-color: green;
   border: 1px solid grey;
   &:hover {
     background-color: greenyellow;

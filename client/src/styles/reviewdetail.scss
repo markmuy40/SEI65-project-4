@@ -11,6 +11,7 @@
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 85vw;
 }
 
 .review-title {
@@ -25,16 +26,17 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow-wrap: break-word;
-  max-width: 80vw;
+  width: 80vw;
   padding-left: 10px;
   padding-right: 10px;
 
 }
 
 .review-image {
+  img{
   display: flex;
   justify-content: center;
-  max-width: 500px;
+  width: 75vw;
   padding: 20px;
-
+  }
 }
