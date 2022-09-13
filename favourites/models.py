@@ -8,10 +8,10 @@ class Favourite(models.Model):
         on_delete = models.CASCADE
         )
     myfavourite = models.BooleanField(default=True)
-        # owner = models.ForeignKey(
-        #         "jwt_auth.User",
-        #         related_name = "favourite",
-        #         on_delete = models.CASCADE    
-        # )
+    owner = models.ForeignKey(
+        "jwt_auth.User",
+        related_name = "favourite",
+        on_delete = models.CASCADE    
+        )
     def __str__(self):
         return f"{self.myfavourite}"
