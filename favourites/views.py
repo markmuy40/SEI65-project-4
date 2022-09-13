@@ -29,5 +29,7 @@ class FavouriteDetailView(APIView):
 
     def delete(self, request, pk):
         favourite_to_delete = self.get_favourite(pk=pk)
+        if favourite_to_delete.owner != request.user:
+            raise PermissionDenied(detail="Unauthorised")
         favourite_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

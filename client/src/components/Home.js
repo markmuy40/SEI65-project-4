@@ -28,7 +28,7 @@ const Home = () => {
     }
     getData()
   }, [])
-  
+  console.log('reviews',reviews)
   return (
     <div className="home">
       <h1 className='text-center mb-4'>Reviews</h1>
@@ -39,7 +39,7 @@ const Home = () => {
             console.log(review)
             return (
               <Col key={id} lg="col-3" className='size'>
-                <Link to={`/reviewdetail/${id}/`}>
+                <Link to={`/review/${id}/`}>
                   <Card>
                     <Card.Body className='bg-light'>
                       <Card.Title className='text-center mb-0'>{Title}</Card.Title>

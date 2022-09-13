@@ -36,7 +36,7 @@ const CreateReviewPage = () => {
     }
 
     try {
-      await axios.post('/api/reviews/', body, {
+      await axios.post('', body, {
         
         headers: {
           Authorization: `Bearer ${getToken()}`,

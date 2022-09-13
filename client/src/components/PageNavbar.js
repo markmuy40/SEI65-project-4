@@ -31,7 +31,7 @@ const PageNavbar = () => {
               ?
               <>
                 <Nav.Link><span onClick={handleLogout}>Logout</span></Nav.Link>
-                <Nav.Link as={Link} to="/createreview">Add a review</Nav.Link>
+                <Nav.Link as={Link} to="/review/new">Add a review</Nav.Link>
               </>
               :
               <>

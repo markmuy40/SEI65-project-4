@@ -4,8 +4,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //components
 
-import ReviewDetail from './components/ReviewDetail'
-import CreateReview from './components/CreateReviewPage'
+import ReviewSingle from './components/ReviewSingle'
+import ReviewNew from './components/ReviewNew'
+import ReviewEdit from './components/ReviewEdit'
+
 
 import Home from './components/Home'
 import Login from './components/Login'
@@ -24,8 +26,10 @@ const App = () => {
         <PageNavbar />
         <Routes>
           <Route path = '/' element = {<Home/>} />
-          <Route path = '/reviewdetail/:id/' element = {<ReviewDetail/>} />
-          <Route path = '/createreview' element = {<CreateReview/>} />
+          <Route path = '/review/:id/' element = {<ReviewSingle/>} />
+          <Route path = '/review/new' element = {<ReviewNew/>} />
+          <Route path = '/review/:id/edit' element = {<ReviewEdit/>} />
+
           <Route path = '/register' element = {<Register/>} />
           <Route path = '/login' element = {<Login/>} />
           <Route path = '*' element = {<NotFound/>} />

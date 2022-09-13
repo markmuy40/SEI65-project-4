@@ -7,4 +7,4 @@ from jwt_auth.serializers.common import UserSerializer
 class PopulatedReviewSerializer(ReviewSerializer):
     comments = PopulatedCommentSerializer(many=True)
     owner = UserSerializer()
-    favourites = FavouriteSerializer()
+    # favourites = FavouriteSerializer()
