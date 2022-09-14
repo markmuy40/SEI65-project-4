@@ -1,10 +1,13 @@
-
+import Spinner from 'react-bootstrap/Spinner' 
 
 
 const Loading = () => {
 
   return (
-    <h1>Loading page</h1>
+    <div className="d-flex flex-column justify-content-center align-items-center" style={{ width: '70vw', height: '62vh' }}>
+      <h1 style={{ color: 'white' }}>Loading ...</h1>
+      <Spinner animation="grow" size="xl" variant="light" />
+    </div>
   )
 
 

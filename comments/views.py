@@ -25,6 +25,8 @@ class CommentListView(APIView):
 
     def post(self, request):
         print("comment post endpoint")
+        request.data['owner'] = request.user.id
+        print("request data", request.data)
         comment_to_create = CommentSerializer(data=request.data)
         try:
             comment_to_create.is_valid(True)
@@ -46,6 +48,7 @@ class CommentDetailView(APIView):
 
     def delete(self, request, pk):
         print("comment delete endpoint")
+
         comment_to_delete = self.get_comment(pk=pk)
         if comment_to_delete.owner != request.user or request.user.is_superuser:
             raise PermissionDenied("Unauthorized!")

@@ -1,31 +1,56 @@
-.home {
 
-  background: url('./images/bikepacked.jpeg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.home-title {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
 }
 
-.card {
-  background: grey;
-  max-width: 200px;
+.review {
+  background-color: rgba(0,0,0,0.8);
+  width: 220px;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
 }
 
-
-.size {
+.review-display {
   display: flex;
   flex-wrap: wrap;
-  background-color: blue;
+  justify-content: center;
+  margin: 10px;
 }
 
-.CardImg {
+.review-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review-map:hover {
+  background-color: rgba(128,128,128,0.3);
+
+}
+.review-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100px;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.price {
+  color: white;
+  padding: 8px;
+}
+
+.review-img {
   position: cover;
   border-radius: 10px;
   height: 200px;
   width: 200px;
   object-fit: cover;
-  opacity: 0.8;
+  margin-bottom: 8px;;
 }
-.CardImg:hover {
-  opacity: 1.0;
-}
+

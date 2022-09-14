@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import { authUser } from './auth'
-
+import image from '../styles/images/bike.png'
 
 
 const PageNavbar = () => {
@@ -19,13 +19,14 @@ const PageNavbar = () => {
 
   }
   return (
-    <Navbar className='navbar' expand="lg">
+    <Navbar className='navbar' expand="md">
       <Container className="navbar-main">
-        <Navbar.Brand className="bender" as={Link} to="/">🚵🏼</Navbar.Brand>
+        <Navbar.Brand className="bike" as={Link} to="/">🚵🏼</Navbar.Brand>
         <div className="banner">Bike Packed?</div>
         <div>
-          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Toggle className="toggle" aria-controls="basic-navbar-nav"><img className="icon" src={image}></img></Navbar.Toggle>
           <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+            
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             { authUser() 
               ?

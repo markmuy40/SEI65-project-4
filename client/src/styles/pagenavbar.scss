@@ -3,13 +3,13 @@
   justify-content: space-around;
   background-color: rgba(0,0,0,0.8);
   color: white;
-
+  padding: 10px;
   min-width: 100vw;
 }
 
 .navbar {
   min-width: 350px;
-
+  position: absolute;
   .navbar-brand {
     margin-right: 0px;
     margin-left: 50px;
@@ -22,10 +22,14 @@
   }
 }
 
+.icon {
+  width: 30px;
+
+}
+
 .banner {
-  max-width: 400px;
+  max-width: 600px;
   font-weight: bolder;
   font-size: 8vh;
   text-align: center;
-
 }

@@ -8,18 +8,77 @@
 @import './reviewform.scss';
 
 * {
-  box-sizing: border-box;
   text-decoration: none;
-  margin: 0;
+  margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0 auto;
-  background-color: red;
   width: 100vw;
   background: url('./images/bikepacked.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+// buttons
+.btn {
+  background-color: green;
+}
+.btn:hover {
+  background-color: greenyellow;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.edit-button {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  color:white;
+  width: 100px;
+  height: 30px;
+
+}
+.edit-button:hover{
+  background-color: yellow;
+  color: grey;
+}
+
+.delete-button {
+  all: unset;
+  background-color: darkred;
+  padding: 5px;
+}
+.delete-button:hover {
+  background-color: red;
+  color: grey;
+
+}
+
+.back-button-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.back-button {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color:white;
+  width: 160px;
+  height: 30px;
+
+}
+.back-button:hover {
+  background-color: greenyellow;
+  color: grey;
 }

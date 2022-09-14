@@ -7,16 +7,23 @@
 
 .navbar {
   min-width: 350px;
+  background-color: white;
 }
 .navbar .navbar-brand {
   margin-right: 0px;
   margin-left: 50px;
+  background-color: white;
 }
 .navbar .nav-link {
+  background-color: aliceblue;
   margin-inline: 10px;
   display: flex;
   justify-content: flex-end;
   color: white;
+}
+
+.toggle {
+  background-color: white ;
 }
 
 .banner {
