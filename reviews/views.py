@@ -64,6 +64,8 @@ class ReviewDetailView(APIView):
     # function to update a review
     def put(self, request, pk):
         print('update review endpoint')
+        print('request data', request.data)
+        request.data['owner'] = request.user.id
         review_to_update = self.get_review(pk=pk)
         updated_review = ReviewSerializer(review_to_update, data=request.data)
         try:

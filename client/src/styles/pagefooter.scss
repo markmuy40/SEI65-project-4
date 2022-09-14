@@ -1,9 +1,10 @@
 .footer-main {
   min-width: 100vw;
-  background-color: black;
-  opacity: 0.8;
+  background-color: rgba(0,0,0,0.8);
   position: absolute;
+  margin: 0;
   height: 125px;
+  color: white;
 }
 
 .footer-container {
@@ -29,13 +30,15 @@
   align-items: center;
   margin-bottom: 5px; 
   padding: 5px 20px 20px 20px;
+  color: white;
   
 }
 
 .Logo {
+  height:42px;
   display: flex;
   justify-content: center;
-  height:50px;
-  width:50px;
+  width:42px;
   margin-top: 10px;
+  background-color: white;
 }

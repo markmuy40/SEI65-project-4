@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
+
+
 // Helpers
 import { userIsOwner, getToken, getUserId } from './auth'
 
@@ -15,13 +17,15 @@ const ReviewEdit = () => {
   
   // ! Router Variables
   const { id } = useParams()
-  const navigate = useNavigate()
+  const navigate = useNavigate() 
   
-  console.log('id', id)
+
+
+
   console.log('params', useParams())
 
-
   // ! State
+
   const [ formData, setFormData ] = useState({
     Title: '',
     Price: '',
@@ -44,32 +48,35 @@ const ReviewEdit = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/reviews/${id}/`)
-        // if (!userIsOwner(data)) navigate(`/review/${id}/`)
+        if (!userIsOwner(data)) navigate(`/review/${id}/`)
         setFormData(data)
-        console.log('data', data)
+        console.log('get data', data)
       } catch (err) {
         console.log(err)
         setSingleError('Failed to retrieve review data. Failed to auto-populate.')
       }
     }
     getData()
-  }, [navigate])
-  console.log('from data', formData)
+  }, [])
+
+  console.log('form data', formData)
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log('form data', formData)
     try {
       // Put method is used when we're updating an existing document on the database
       const { data } = await axios.put(`/api/reviews/${id}/`, formData, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
-        owner: parseInt(getUserId()),
       })  
       // Navigate back to updated review single page
-      navigate(`/review/single/${data.id}/`)
+      navigate(`/review/${id}/`)
     } catch (err) {
       console.log(err)
+      setErrors(err)
+      console.log('errors', errors)
     }
   }
 
