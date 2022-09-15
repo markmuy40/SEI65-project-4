@@ -6,7 +6,7 @@ class Review(models.Model):
         Title = models.CharField(max_length=100)
         Price = models.CharField(max_length=20, default=None)
         Description = models.TextField()
-        ImageUrl = models.CharField(max_length=200, default=None)
+        ImageUrl = models.CharField(max_length=200, blank=True)
         created_at = models.DateTimeField(auto_now_add=True)
         
         owner = models.ForeignKey(

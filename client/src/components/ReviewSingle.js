@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams , Link, useNavigate } from 'react-router-dom'
-
+import placeholder from '../styles/images/no-image.png' 
 import axios from 'axios'
 
 import { getPayload, getToken, getUserId, userIsOwner, authUser } from './auth'
@@ -10,79 +10,77 @@ import Nav from 'react-bootstrap/Nav'
 const ReviewSingle = () => {
 
   // Set of states
-  const navigate = useNavigate()
   const { id } = useParams()
   const [ errors, setErrors ] = useState(false)
   const [ singleReview, setSingleReview ] = useState(null)
-  const [ commentId, setCommentId ] = useState('')
+  const navigate = useNavigate()
   
   const [formData, setFormData ] = useState({
     text: '',
     review: null,
   })
 
-  const handleComment = (event) => {
-    console.log('25', formData)
-    setFormData({ ...formData, [event.target.name]: event.target.value, review: parseInt(id) })
-    console.log('27', formData)
+  // Get single review - triggered by use effect below ---------------------------------------
+
+  const getData = async () => {
+    try {
+      const { data } = await axios.get(`/api/reviews/${id}/`)
+      setSingleReview(data)
+    } catch (error) {
+      setErrors(true)
+    }
   }
 
+  // add a comment----------------------------------------------------------------------------
 
-  // ! add a comment------------------------------------------------------
-  const handleSubmit = async (event) => {
+  const handleComment = (event) => {
+    event.preventDefault()
+    setFormData({ ...formData, [event.target.name]: event.target.value, review: parseInt(id) })
+  }
+
+  const handleSubmit = async () => {
+    // event.preventDefault()
+
     try {
       const { data } = await axios.post('/api/comments/', formData, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
       })
-      // Navigate to the review single page but on the review we've just created
-      navigate(`/review/${id}/`)
+
+      getData()
+
     } catch (err) {
-      console.log(err.response.data)
       setErrors(err.response.data)
+      console.log(errors)
     }
   }
 
-  // ! delete comment-----------------------------------------------------
+  // ! delete comment-------------------------------------------------------------------------
 
-  // console.log('event target name', event.target.name)
-  // setCommentId(event.target.name)
-  // console.log('comment id', commentId)
-
-  const deleteComment = async (event) => {
-
+  const deleteComment = async () => {
+    
     try { 
-      await axios.delete(`/api/comments/${event.target.name}/`, {
+      await axios.delete(`/api/comments/${event.target.value}/`, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
       })
-      navigate(`/review/${id}`)
+      getData()
     } catch (err) {
       console.log(err)
     }
-
   } 
 
-  // ! get single review--------------------------------------------------
+  // get single review------------------------------------------------------------------------
   
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await axios.get(`/api/reviews/${id}/`)
-        setSingleReview(data)
-      } catch (error) {
-        setErrors(true)
-      }
-    }
     getData()
   }, [])
-  // ! delete review -------------------------------------------------------
-  
+
+  // ! delete review -------------------------------------------------------------------------
   
   const deleteReview = async () => {
-
     try { 
       await axios.delete(`/api/reviews/${id}/`, {
         headers: {
@@ -112,9 +110,7 @@ const ReviewSingle = () => {
                 <p className="review-description-text" >{singleReview.Description}</p>
               </div>
               <div className="review-image">
-          
-                <img src={singleReview.ImageUrl}></img>
-          
+                <img src={singleReview.ImageUrl ? singleReview.ImageUrl : placeholder}></img>
               </div>
               { userIsOwner(singleReview) &&
               <div className="button-container">
@@ -127,6 +123,7 @@ const ReviewSingle = () => {
               </div>
             </div>
           </div>
+
           <div className="comment-container">
             {  singleReview.comments.map(comment => {
               const { text, id, owner } = comment
@@ -137,15 +134,15 @@ const ReviewSingle = () => {
                   <p>{text}</p>
                   
                   {userIsOwner(comment) &&
-                      <span>
-                        <label htmlFor="Comment-delete"></label>
-                        <input type="submit" name={comment.id} value="delete" className="btn" onClick={deleteComment}></input>
-                      </span>
+                    <div className="delete-comment">
+                      <Button className="delete-button" name="Delete" value={comment.id} onClick={deleteComment}>Delete this comment</Button>
+                    </div>
                   }
                 </div>
               )
             })}
           </div>
+
           { authUser()
           &&
           <div className="leave-comment-container">
@@ -153,7 +150,7 @@ const ReviewSingle = () => {
               <form className="comment-form" onSubmit={handleSubmit}>
                 <label htmlFor="Comment">Comment</label>
                 <textarea name="text" placeholder="type comment here" value={formData.text} onChange={handleComment}></textarea>
-                <input type="submit" className="btn"></input>
+                <input type="submit" className="submit"></input>
               </form>
             </div>
           </div>
@@ -164,5 +161,4 @@ const ReviewSingle = () => {
   )
 }
 
-  
 export default ReviewSingle 

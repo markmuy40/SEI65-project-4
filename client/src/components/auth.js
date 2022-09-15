@@ -24,16 +24,11 @@ export const authUser = () => {
 export const userIsOwner = (data) => {
   const payload = getPayload()
   if (!payload) return
-  console.log('payload sub', payload.sub)
-  console.log('data.owner.id', data.owner.id)
   return payload.sub === data.owner.id
 }
 
 export const getUserId = () => {
   const payload = getPayload()
-  console.log('payload', payload)
-  console.log('payload sub', payload.sub)
-  console.log('both', payload && payload.sub)
   return payload && payload.sub
 
 }

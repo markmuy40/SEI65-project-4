@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import placeholder from '../styles/images/no-image.png'
 
 // Import Bootstrap Components
 import Loading from './Loading'
@@ -17,7 +18,7 @@ const Home = () => {
       try {
         const { data } = await axios.get('/api/reviews/')
         console.log(data)
-        // setReviews(data)
+        setReviews(data)
       } catch (errors) {
         console.log(errors)
         setErrors(true)
@@ -43,7 +44,7 @@ const Home = () => {
                   <div className='review-map'>
                     <h4 className='review-title'>{Title}</h4>
                     <p className="price">{Price}</p>
-                    <img className="review-img" src={ImageUrl}></img>
+                    <img className="review-img" src={ImageUrl ? ImageUrl : placeholder}></img>
                   </div>
                 </Link>
               </div>
