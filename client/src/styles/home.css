@@ -4,21 +4,4 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-.card {
-  background: grey;
-}
-
-.CardImg {
-  position: cover;
-  border-radius: 10px;
-  height: 200px;
-  width: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.8;
-}
-
-.CardImg:hover {
-  opacity: 1;
-}/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=home.css.map */

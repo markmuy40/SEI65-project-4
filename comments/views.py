@@ -48,9 +48,12 @@ class CommentDetailView(APIView):
 
     def delete(self, request, pk):
         print("comment delete endpoint")
-
+        request.data['owner'] = request.user.id
         comment_to_delete = self.get_comment(pk=pk)
-        if comment_to_delete.owner != request.user or request.user.is_superuser:
+        print('comment_to_delete', comment_to_delete.owner)
+        print('request.user', request.user)
+        if comment_to_delete.owner != request.user:
+            print('past if statement')
             raise PermissionDenied("Unauthorized!")
         comment_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

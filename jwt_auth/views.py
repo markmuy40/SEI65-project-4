@@ -54,7 +54,7 @@ class LoginView(APIView):
 
             # check passwords match
         if not user_to_login.check_password(password):
-            raise PermissionDenied("invalid credentials")
+            raise Response({ 'message': 'invalid credentials' })
 
             #at thi point user is valid, send a token
         dt = datetime.now() + timedelta(days=7)

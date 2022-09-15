@@ -6,17 +6,25 @@
 @import './pagefooter.scss';
 @import './reviewsingle.scss';
 @import './reviewform.scss';
+@import './notFound.scss';
 
 * {
   text-decoration: none;
-  margin: 0 auto;
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+// .main {
+//   min-height: calc(100vh - 131px - 80px);
+//   background-color: black;
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
+
+.App {
   margin: 0 auto;
-  width: 100vw;
-  background: url('./images/bikepacked.jpeg');
+  background-image: url('./images/bikepacked.jpeg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,16 +33,17 @@ body {
 // buttons
 .submit {
   background-color: green;
+  color: white;
+  margin:10px;
+  &:hover {
+    background-color: greenyellow;
 }
-.submit:hover {
-  background-color: greenyellow;
 }
 
 .button-container {
   display: flex;
-  justify-content: space-around;
   padding: 10px;
-}
+
 .edit-button {
   display:flex;
   justify-content: center;
@@ -42,24 +51,30 @@ body {
   background-color: orange;
   color:white;
   width: 100px;
-  height: 30px;
-
+  height: 35px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+    &:hover{
+    background-color: yellow;
+    color: grey;
+    }
 }
-.edit-button:hover{
-  background-color: yellow;
-  color: grey;
 }
-
 .delete-button {
   all: unset;
   background-color: darkred;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+    &:hover {
+    background-color: red;
+    }
 }
-.delete-button:hover {
-  background-color: red;
-  color: grey;
 
-}
 
 .back-button-container {
   padding: 10px;
@@ -73,12 +88,13 @@ body {
   justify-content: center;
   align-items: center;
   background-color: green;
+  text-decoration: none;
   color:white;
   width: 160px;
-  height: 30px;
-
-}
-.back-button:hover {
-  background-color: greenyellow;
-  color: grey;
+  height: 35px;
+  border-radius: 5px;
+    &:hover {
+    background-color: greenyellow;
+    color: grey;
+    }
 }

@@ -21,7 +21,7 @@ import NotFound from './components/NotFound'
 const App = () => {
 
   return (
-    <div className= 'App'>
+    <div className='App'>
       <BrowserRouter>
         <PageNavbar />
         <Routes>

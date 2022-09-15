@@ -25,6 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 100vh;
 }
 .review-map:hover {
   background-color: rgba(128,128,128,0.3);
@@ -46,11 +47,9 @@
 }
 
 .review-img {
-  position: cover;
-  border-radius: 10px;
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  margin-bottom: 8px;;
+  max-width: 200px;
+  max-height: 200px;
+  padding-bottom: 10px;
 }
+
 
