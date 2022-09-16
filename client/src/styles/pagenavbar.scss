@@ -1,6 +1,9 @@
+
+
+
 .navbar-main {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-a;
   background-color: rgba(0,0,0,0.8);
   color: white;
   padding: 10px;
@@ -19,12 +22,25 @@
     display: flex;
     justify-content: flex-end;
     color: white;
+    padding-right: 20px;
   }
 }
 
 .icon {
-  width: 30px;
+  max-width: 40px;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  } 
 
+}
+
+.bike {
+  max-width: 50px;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .banner {
@@ -32,4 +48,22 @@
   font-weight: bolder;
   font-size: 8vh;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
 }
+
+.navbar-link {
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .banner {
+    font-size: 5vh;
+    font-family: 'Permanent Marker', cursive;
+  }
+}
+

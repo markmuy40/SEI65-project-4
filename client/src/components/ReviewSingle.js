@@ -65,7 +65,9 @@ const ReviewSingle = () => {
     }
   } 
 
-  // get single review--------------------------------------------------
+  // get single review  ------------------------------------------------------
+  
+
   
   const getData = async () => {
     try {
@@ -105,23 +107,23 @@ const ReviewSingle = () => {
                 <h3>{singleReview.Title}</h3>
               </div>
               <div className="review-price">
-                <h4>{singleReview.Price}</h4>
+                <h4>Price: {singleReview.Price}</h4>
               </div>
               <div className="review-description">
                 <h4 className="review-owner">by: {singleReview.owner.username}</h4>
                 <p className="review-description-text" >{singleReview.Description}</p>
               </div>
               <div className="review-image">
-                <img src={singleReview.ImageUrl ? singleReview.ImageUrl : placeholder}></img>
+                <img className="main-review-img"src={singleReview.ImageUrl ? singleReview.ImageUrl : placeholder }></img>
               </div>
               { userIsOwner(singleReview) &&
               <div className="button-container">
                 <button className="delete-button" onClick={deleteReview}>Delete review</button>
-                <Link to={`/review/${id}/edit`} className="edit-button">edit review</Link>
+                <Link to={`/review/${id}/edit`} className="edit-button">Edit review</Link>
               </div>
               }    
               <div className="back-button-container">
-                <Link to='/' className='back-button'>Back to all reviews</Link>         
+                <Link to='/' className='back-button'>Back to reviews</Link>         
               </div>
             </div>
           </div>
@@ -147,16 +149,21 @@ const ReviewSingle = () => {
             })}
           </div>
           { authUser()
-          &&
-          <div className="leave-comment-container">
-            <div className="leave-comment">
-              <form className="comment-form" onSubmit={handleSubmit}>
-                <label htmlFor="Comment">Comment</label>
-                <textarea name="text" placeholder="type comment here" value={formData.text} onChange={handleComment}></textarea>
-                <input type="submit" className="submit"></input>
-              </form>
+            ?
+            <div className="leave-comment-container">
+              <div className="leave-comment">
+                <form className="comment-form" onSubmit={handleSubmit}>
+                  <label htmlFor="Comment">Comment</label>
+                  <textarea name="text" placeholder="type comment here" value={formData.text} onChange={handleComment}></textarea>
+                  <input type="submit" className="submit"></input>
+                </form>
+              </div>
             </div>
-          </div>
+            :
+            <div className="leave-review-container">
+              <Link to='/register' className='leave-review'>Want to add a comment? Register here </Link> 
+              <Link to='/login' className='leave-review'>Or login here</Link> 
+            </div>
           }
         </>
       }

@@ -50,8 +50,6 @@ class CommentDetailView(APIView):
         print("comment delete endpoint")
         request.data['owner'] = request.user.id
         comment_to_delete = self.get_comment(pk=pk)
-        print('comment_to_delete', comment_to_delete.owner)
-        print('request.user', request.user)
         if comment_to_delete.owner != request.user:
             print('past if statement')
             raise PermissionDenied("Unauthorized!")

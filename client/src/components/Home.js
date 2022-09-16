@@ -42,8 +42,10 @@ const Home = () => {
               <div key={id} className='review'>
                 <Link style={{ textDecoration: 'none' }} to={`/review/${id}/`}>
                   <div className='review-map'>
-                    <h4 className='review-title'>{Title}</h4>
-                    <p className="price">{Price}</p>
+                    <div className='review-title'>
+                      <h4>{Title}</h4>
+                    </div>
+                    <p className="price">Price:{Price}</p>
                     <img className="review-img" src={ImageUrl ? ImageUrl : placeholder}></img>
                   </div>
                 </Link>

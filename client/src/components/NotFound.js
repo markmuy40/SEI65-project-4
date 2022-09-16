@@ -8,8 +8,8 @@ const NotFound = () => {
       <Link to={'/'} className="notFound-text">
         <p>Oops! Click to return to index</p>
       </Link>
-      <div className="notfound-image">
-        <img src={notFound} width="1000px"></img>
+      <div >
+        <img className="notfound-image" src={notFound} ></img>
       </div>
     </div>
   )
