@@ -26,8 +26,6 @@ const Home = () => {
     }
     getData()
   }, [])
-
-  console.log('reviews',reviews)
   
   return (
     <div className="main">
@@ -37,7 +35,6 @@ const Home = () => {
           ?
           reviews.map(review => {
             const { id, Title, Price, ImageUrl } = review
-            console.log(review)
             return (
               <div key={id} className='review'>
                 <Link style={{ textDecoration: 'none' }} to={`/review/${id}/`}>

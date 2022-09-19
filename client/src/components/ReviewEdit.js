@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-
-
 // Helpers
 import { userIsOwner, getToken, getUserId } from './auth'
 
@@ -19,13 +17,7 @@ const ReviewEdit = () => {
   const { id } = useParams()
   const navigate = useNavigate() 
   
-
-
-
-  console.log('params', useParams())
-
   // ! State
-
   const [ formData, setFormData ] = useState({
     Title: '',
     Price: '',
@@ -50,7 +42,6 @@ const ReviewEdit = () => {
         const { data } = await axios.get(`/api/reviews/${id}/`)
         if (!userIsOwner(data)) navigate(`/review/${id}/`)
         setFormData(data)
-        console.log('get data', data)
       } catch (err) {
         console.log(err)
         setSingleError('Failed to retrieve review data. Failed to auto-populate.')
@@ -59,11 +50,8 @@ const ReviewEdit = () => {
     getData()
   }, [])
 
-  console.log('form data', formData)
-
   const handleSubmit = async (event) => {
     event.preventDefault()
-
     try {
       const { data } = await axios.put(`/api/reviews/${id}/`, formData, {
         headers: {

@@ -74,4 +74,4 @@ class ReviewDetailView(APIView):
             return Response(updated_review.data, status=status.HTTP_202_ACCEPTED)
         except Exception as e:
             print(e)
-            return Response(str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response(e.__dict__ if e.__dict__ else str(e), status=status.HTTP_422_UNPROCESSABLE_ENTITY)

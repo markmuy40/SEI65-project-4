@@ -114,7 +114,7 @@ const ReviewSingle = () => {
                 <p className="review-description-text" >{singleReview.Description}</p>
               </div>
               <div className="review-image">
-                <img className="main-review-img"src={singleReview.ImageUrl ? singleReview.ImageUrl : placeholder }></img>
+                <img className="main-review-img"src={singleReview.ImageUrl ? singleReview.ImageUrl : placeholder}></img>
               </div>
               { userIsOwner(singleReview) &&
               <div className="button-container">
@@ -171,5 +171,4 @@ const ReviewSingle = () => {
   )
 }
 
-  
 export default ReviewSingle 

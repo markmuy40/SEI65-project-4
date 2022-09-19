@@ -27,6 +27,7 @@ export const userIsOwner = (data) => {
   return payload.sub === data.owner.id
 }
 
+
 export const getUserId = () => {
   const payload = getPayload()
   return payload && payload.sub
