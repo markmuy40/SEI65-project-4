@@ -27,7 +27,7 @@ const PageNavbar = () => {
           <Navbar.Toggle className="toggle" aria-controls="basic-navbar-nav"><img className="icon" src={image}></img></Navbar.Toggle>
           <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
             
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link className="navbar-link" as={Link} to="/">Home</Nav.Link>
             { authUser() 
               ?
               <>
