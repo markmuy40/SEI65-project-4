@@ -26,8 +26,8 @@ const Register = () => {
       const { data } = await axios.post('/api/auth/register/', formData)
       navigate('/login')
     } catch (error) {
-      console.log('error->', error.response.data)
-      setError(error.response.data)
+      console.log('error->', error.response.data.detail)
+      setError(error.response.data.detail)
     }
   }
 
@@ -37,9 +37,13 @@ const Register = () => {
         <form onSubmit={onSubmit} className='register-form'>
           <h1 className='register-title'>Registration form</h1>
           <input type='text' name='username' placeholder='Username' value={formData.username} onChange={handleChange}/>
+          { error.username && <div>{error.username[0]}</div>}
           <input type='text' name='email' placeholder='Email' value={formData.email} onChange={handleChange}/>
+          { error.email && <div>{error.email[0]}</div>}
           <input type='password' name='password' placeholder='Password' value={formData.password} onChange={handleChange}/>
+          { error.password && <div>{error.password[0]}</div>}
           <input type='password' name='password_confirmation' placeholder='Confirm Password' value={formData.password_confirmation} onChange={handleChange}/>
+          { error.password_confirmation && <div>{error.password_confirmation[0]}</div>}
           <div className='register-button-container'>
             <button type='submit' className='register-button'>Register</button>
           </div>

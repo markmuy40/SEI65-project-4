@@ -41,11 +41,10 @@ const reviewNew = () => {
         },
       })
       console.log(data)
-      // Navigate to the bread single page but on the bread we've just created
       navigate(`/review/${data.id}/`)
     } catch (err) {
-      console.log(err.response.data)
-      setErrors(err.response.data)
+      console.log(err.response.data.detail)
+      setErrors(err.response.data.detail)
     }
   }
 

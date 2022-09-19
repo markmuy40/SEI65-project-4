@@ -63,20 +63,17 @@ const ReviewEdit = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log('form data', formData)
+
     try {
-      // Put method is used when we're updating an existing document on the database
       const { data } = await axios.put(`/api/reviews/${id}/`, formData, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
       })  
-      // Navigate back to updated review single page
       navigate(`/review/${id}/`)
     } catch (err) {
-      console.log(err)
-      setErrors(err)
-      console.log('errors', errors)
+      console.log('error->', err.response.data.detail)
+      setErrors(err.response.data.detail)
     }
   }
 

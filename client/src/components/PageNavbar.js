@@ -31,7 +31,7 @@ const PageNavbar = () => {
             { authUser() 
               ?
               <>
-                <Nav.Link className="navbar-link"><span className="navbar-link" onClick={handleLogout}>Logout</span></Nav.Link>
+                <Nav.Link className="navbar-link" onClick={handleLogout}>Logout</Nav.Link>
                 <Nav.Link className="navbar-link" as={Link} to="/review/new">Add a review</Nav.Link>
               </>
               :
