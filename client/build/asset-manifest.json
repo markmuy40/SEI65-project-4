@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dd528cca.css",
+    "main.js": "/static/js/main.2c9c9d80.js",
+    "static/media/bikepacked.jpeg": "/static/media/bikepacked.a7988ab4025d3c8aa330.jpeg",
+    "static/media/not-found.png": "/static/media/not-found.8cdca16137fd1ad9e84f.png",
+    "static/media/no-image.png": "/static/media/no-image.92372286b524e49e3734.png",
+    "static/media/bike.png": "/static/media/bike.e6242f6da492ed600f96.png",
+    "static/media/home-icon.png": "/static/media/home-icon.c0d6992157bd59ed21bc.png",
+    "static/media/linked.png": "/static/media/linked.0ba4345a1ac0fdb4d524.png",
+    "index.html": "/index.html",
+    "main.dd528cca.css.map": "/static/css/main.dd528cca.css.map",
+    "main.2c9c9d80.js.map": "/static/js/main.2c9c9d80.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd528cca.css",
+    "static/js/main.2c9c9d80.js"
+  ]
+}

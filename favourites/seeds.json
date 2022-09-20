@@ -4,7 +4,8 @@
   "pk": 13,
   "fields": {
     "review": 1,
-    "myfavourite": true
+    "myfavourite": true,
+    "owner": 1
   }
 },
 {
@@ -12,7 +13,8 @@
   "pk": 14,
   "fields": {
     "review": 3,
-    "myfavourite": true
+    "myfavourite": true,
+    "owner": 1
   }
 }
 ]
