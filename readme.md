@@ -12,7 +12,7 @@ Bike Packed? is a Full Stack review website I created for General Assembly SE Im
  
 ### Description
  
-Project 4 took place on the final week of our course, at the end of module 4. I had just over a week to complete this project, creating an API and Front-end Application that would interact with the API.
+This project took place on the final week of our course, at the end of module 4. I had just over a week to complete this project, creating an API and Front-end Application that would interact with the API.
  
 ### Deployment Link
  
@@ -31,23 +31,24 @@ I had just under nine days to create the Full Stack application. All students ha
 ### Technologies used:
  
 #### Front-end
-HTML
-CSS
-SASS
-JavaScript
-React.JS
-React Bootstrap
+
+- HTML
+- CSS
+- SASS
+- JavaScript
+- React.JS
+- React Bootstrap
  
 #### Back-end / API
-Python – server-side language.
-Django – REST framework to build the API.
-Heroku – Back-end deployment.
+- Python – server-side language.
+- Django – REST framework to build the API.
+- Heroku – Back-end deployment.
  
 #### Development Tools
-VSCode – Primary build tool.
-Google Dev Tools
-Insomnia – Testing the API for requests and Database response.
-GitHub – Version control.
+- VSCode – Primary build tool.
+- Google Dev Tools
+- Insomnia – Testing the API for requests and Database response.
+- GitHub – Version control.
  
 ### Brief
  
@@ -296,7 +297,7 @@ The helper functions for authenticated routes.
  
  
  
-Your hardest times often lead to the greatest moments of your life. Keep going. Tough situations build strong people in the end. – Roy Bennet
+*Your hardest times often lead to the greatest moments of your life. Keep going. Tough situations build strong people in the end.* – Roy Bennet
  
 Being a manager in my previous career, people came to me looking for answers to common and uncommon problems, which I had the answer to or could find relatively easily. What happens when I need an answer and can’t find it?
  
