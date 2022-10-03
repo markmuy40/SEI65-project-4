@@ -58,7 +58,6 @@ const ReviewSingle = () => {
           Authorization: `Bearer ${getToken()}`,
         },
       })
-      console.log
       getData()
     } catch (err) {
       console.log(err)

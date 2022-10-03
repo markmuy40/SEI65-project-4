@@ -52,13 +52,12 @@
 }
 
 .navbar-link {
+  margin: 0 auto;
   opacity: 0.8;
   &:hover {
     opacity: 1;
   }
 }
-
-
 
 @media screen and (max-width: 768px) {
   .banner {
